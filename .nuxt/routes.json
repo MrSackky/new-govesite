@@ -2,29 +2,36 @@
   {
     "name": "inspire",
     "path": "/inspire",
-    "component": "D:\\\\doc\\\\govesite00004\\\\pages\\\\inspire.vue",
+    "component": "D:\\\\doc\\\\new-govesite-\\\\pages\\\\inspire.vue",
     "chunkName": "pages/inspire",
-    "_name": "_32e3b478"
+    "_name": "_547ec784"
+  },
+  {
+    "name": "loggg",
+    "path": "/loggg",
+    "component": "D:\\\\doc\\\\new-govesite-\\\\pages\\\\loggg.vue",
+    "chunkName": "pages/loggg",
+    "_name": "_a564a964"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "D:\\\\doc\\\\govesite00004\\\\pages\\\\login.vue",
+    "component": "D:\\\\doc\\\\new-govesite-\\\\pages\\\\login.vue",
     "chunkName": "pages/login",
-    "_name": "_39fd9b07"
+    "_name": "_9dcbfdda"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "D:\\\\doc\\\\govesite00004\\\\pages\\\\register.vue",
+    "component": "D:\\\\doc\\\\new-govesite-\\\\pages\\\\register.vue",
     "chunkName": "pages/register",
-    "_name": "_2daccc75"
+    "_name": "_3f741ae9"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\doc\\\\govesite00004\\\\pages\\\\index.vue",
+    "component": "D:\\\\doc\\\\new-govesite-\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_7055f7f0"
+    "_name": "_311b4408"
   }
 ]
