@@ -1,0 +1,29 @@
+{
+  "Contact": {
+    "description": "Auto imported from components/contact.vue"
+  },
+  "Feaure": {
+    "description": "Auto imported from components/feaure.vue"
+  },
+  "Foot": {
+    "description": "Auto imported from components/foot.vue"
+  },
+  "Footmain": {
+    "description": "Auto imported from components/footmain.vue"
+  },
+  "Navbars": {
+    "description": "Auto imported from components/navbars.vue"
+  },
+  "Navt": {
+    "description": "Auto imported from components/navt.vue"
+  },
+  "Pricing": {
+    "description": "Auto imported from components/pricing.vue"
+  },
+  "Slide": {
+    "description": "Auto imported from components/slide.vue"
+  },
+  "Spot": {
+    "description": "Auto imported from components/spot.vue"
+  }
+}

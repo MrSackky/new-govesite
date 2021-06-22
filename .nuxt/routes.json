@@ -1,0 +1,30 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "D:\\\\doc\\\\govesite00004\\\\pages\\\\inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_32e3b478"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "D:\\\\doc\\\\govesite00004\\\\pages\\\\login.vue",
+    "chunkName": "pages/login",
+    "_name": "_39fd9b07"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "D:\\\\doc\\\\govesite00004\\\\pages\\\\register.vue",
+    "chunkName": "pages/register",
+    "_name": "_2daccc75"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\doc\\\\govesite00004\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_7055f7f0"
+  }
+]
