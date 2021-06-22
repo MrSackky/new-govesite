@@ -21,6 +21,12 @@
                   >
                     <b>เข้าสู่ระบบ</b>
                   </a>
+                  <a
+                    href="#"
+                    class="text-decoration-none grey--text mr-2 ml-2"
+                  >
+                    <b>ลืมรหัสผ่าน?</b>
+                  </a>
                 </p>
               </v-col></v-row
             >
@@ -70,7 +76,7 @@
                         id="phone"
                         name="phone"
                         placeholder="เบอร์โทร"
-                        class="form-control"
+                        class="form-control"  
                       />
                     </div>
                     <label for="" class="grey--text">URL ใช้งาน</label>

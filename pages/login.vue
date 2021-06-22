@@ -25,6 +25,9 @@
                   >
                     <b>สมัครสมาชิก</b>
                   </a>
+                  <a href="#" class="text-decoration-none grey--text mr-2 ml-2">
+                    <b>ลืมรหัสผ่าน?</b>
+                  </a>
                 </p>
               </v-col></v-row
             >
