@@ -21,10 +21,7 @@
                   >
                     <b>เข้าสู่ระบบ</b>
                   </a>
-                  <a
-                    href="#"
-                    class="text-decoration-none grey--text mr-2 ml-2"
-                  >
+                  <a href="#" class="text-decoration-none grey--text mr-2 ml-2">
                     <b>ลืมรหัสผ่าน?</b>
                   </a>
                 </p>
@@ -42,103 +39,104 @@
               <v-row>
                 <v-col>
                   <div class="content">
-                    <div class="form-group">
-                      <label for="govename" class="grey--text"
-                        >ชื่อหน่วยงาน</label
-                      >
-                      <v-text-field
-                        outlined
-                        type="text"
-                        id="govename"
-                        name="govename"
-                        placeholder="ชื่อหน่วยงาน"
-                        class="form-control"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="usernames" class="grey--text"
-                        >ชื่อผู้ติดต่อ</label
-                      >
-                      <v-text-field
-                        outlined
-                        type="text"
-                        id="usernames"
-                        name="usernames"
-                        placeholder="ชื่อผู้ติดต่อ"
-                        class="form-control"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="phone" class="grey--text">เบอร์โทร</label>
-                      <v-text-field
-                        outlined
-                        type="text"
-                        id="phone"
-                        name="phone"
-                        placeholder="เบอร์โทร"
-                        class="form-control"  
-                      />
-                    </div>
-                    <label for="" class="grey--text">URL ใช้งาน</label>
-                    <div class="form-group">
-                      <v-row class="text-left"
-                        ><v-col class="mt-4 mr-4"> government.com/</v-col>
+                    <v-form v-model="invalid">
+                      <div class="form-group">
+                        <label for="govename" class="grey--text"
+                          >ชื่อหน่วยงาน</label
+                        >
                         <v-text-field
                           outlined
-                          type="text"
-                          id="goveurl"
-                          name="goveurl"
-                          placeholder="ชื่อ url"
-                          class="form-control text-left mt-3 mr-3"
-                          style="width: 50%"
-                      /></v-row>
-                    </div>
-                    <div class="form-group">
-                      <label for="email" class="grey--text">อีเมลล์</label>
-                      <v-text-field
-                        outlined
-                        type="text"
-                        id="email"
-                        name="email"
-                        placeholder="อีเมล"
-                        class="form-control"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="password" class="grey--text">Password</label>
-                      <v-text-field
-                        outlined
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="รหัสผ่าน"
-                        class="form-control"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="confirmPassword" class="grey--text"
-                        >ยืนยันรหัสผ่าน</label
+                          v-model="govename"
+                          :rules="govenamerules"
+                          label="ชื่อหน่วยงาน"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="usernames" class="grey--text"
+                          >ชื่อผู้ติดต่อ</label
+                        >
+                        <v-text-field
+                          outlined
+                          v-model="username"
+                          :rules="usernamerules"
+                          label="ชื่อผู้ติดต่อ"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="phone" class="grey--text">เบอร์โทร</label>
+                        <v-text-field
+                          outlined
+                          v-model="phone"
+                          :rules="phonerules"
+                          label="เบอร์โทร"
+                          required
+                        />
+                      </div>
+                      <label for="" class="grey--text">URL ใช้งาน</label>
+                      <div class="form-group">
+                        <v-row class="text-left"
+                          ><v-col class="mt-4 mr-4"> government.com/</v-col>
+                          <v-text-field
+                            outlined
+                            v-model="goveurl"
+                            :rules="goveurlrules"
+                            label="ชื่อ url"
+                            class="form-control text-left mt-3 mr-3"
+                            style="width: 50%"
+                            required
+                        /></v-row>
+                      </div>
+                      <div class="form-group">
+                        <label for="email" class="grey--text">อีเมลล์</label>
+                        <v-text-field
+                          outlined
+                          v-model="email"
+                          :rules="emailrules"
+                          label="อีเมล"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="password" class="grey--text"
+                          >Password</label
+                        >
+                        <v-text-field
+                          outlined
+                          v-model="password"
+                          :rules="passwordrules"
+                          type="password"
+                          label="รหัสผ่าน"
+                          required
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="confirmPassword" class="grey--text"
+                          >ยืนยันรหัสผ่าน</label
+                        >
+                        <v-text-field
+                          outlined
+                          v-model="confirmpassword"
+                          :rules="[passwordMatch,confirmpasswordrules]"
+                          type="password"
+                          label="ยืนยันรหัสผ่าน"
+                          required
+                        />
+                      </div>
+                      <v-btn
+                        to="#"
+                        color="green darken-4"
+                        class="white--text mb-4 mt-4 mr-2"
+                        style="width: 100%"
+                        :disabled="!invalid"
                       >
-                      <v-text-field
-                        outlined
-                        type="password"
-                        id="confirmPassword"
-                        name="confirmPassword"
-                        placeholder="ยืนยันรหัสผ่าน"
-                        class="form-control"
-                      />
-                    </div>
+                        สมัครสมาชิก
+                      </v-btn>
+                    </v-form>
                   </div>
                 </v-col>
               </v-row>
-              <v-btn
-                to="#"
-                color="green darken-4"
-                class="white--text mb-4 mt-4 mr-2"
-                style="width: 100%"
-              >
-                สมัครสมาชิก
-              </v-btn>
             </div>
           </div>
         </div>
@@ -151,6 +149,39 @@
 <script>
 import foot from "~/components/foot.vue";
 export default {
-  name: "register"
+  name: "register",
+  components: {
+    foot,
+  },
+  data: () => ({
+    govename: "",
+    username: "",
+    phone: "",
+    goveurl: "",
+    email: "",
+    password: "",
+    confirmpassword: "",
+    govenamerules: [(v) => !!v || "กรุณากรอกชื่อหน่วยงาน"],
+    usernamerules: [(v) => !!v || "กรุณากรอกชื่อผู้ติดต่อ"],
+    phonerules: [(v) => !!v || "กรุณากรอกเบอร์โทร"],
+    goveurlrules: [(v) => !!v || "กรุณากรอก URL ใช้งาน"],
+    emailrules: [(v) => !!v || "กรุณากรอกอีเมลล์",
+        (v) => /.+@.+/.test(v) || 'กรุณากรอกอีเมลล์ให้ถูกต้อง',],
+    passwordrules: [
+      (v) => !!v || "กรุณากรอกรหัสผ่าน",
+      (v) => (v && v.length >= 8) || "กรุณากรอกรหัสผ่านอย่างน้อย 8 ตัวอักษร",
+    ],
+    confirmpasswordrules: [
+      (v) => !!v || "กรุณายืนยันรหัสผ่าน",
+      (v) => (v && v.length >= 8) || "กรุณากรอกรหัสผ่านอย่างน้อย 8 ตัวอักษร",
+    ],
+  }),
+  computed: {
+    passwordMatch() {
+      return () =>
+        this.password === this.confirmpassword || "รหัสผ่านไม่ตรงกัน",
+        this.confirmpassword === this.password || "รหัสผ่านไม่ตรงกัน";
+    },
+  },
 };
 </script>

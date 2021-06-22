@@ -32,62 +32,46 @@
               </v-col></v-row
             >
           </div>
-          <validation-observer ref="observer" v-slot="{ invalid }">
-            <form @submit.prevent="submit">
-              <div class="ml-3 mr-3">
-                <div class="card-body login-card-body">
-                  <h1 class="login-box-msg mb-3">เข้าสู่ระบบ</h1>
-                  <p class="login-box-msg grey--text">
-                    เข้าสู่ระบบเพื่อใช้งานระบบเว็บไซต์หน่วยงานสำเร็จรูป
-                  </p>
-                </div>
-                <validation-provider
-                  v-slot="{ errors }"
-                  name="Name"
-                  rules="required|max:10"
-                >
-                  <v-text-field
-                    outlined
-                    v-model="username"
-                    :error-messages="errors"
-                    label="Username"
-                    required
-                  ></v-text-field>
-                </validation-provider>
-                <validation-provider
-                  v-slot="{ errors }"
-                  name="Password"
-                  rules="required|max:10"
-                >
-                  <v-text-field
-                    outlined
-                    type="password"
-                    v-model="password"
-                    :error-messages="errors"
-                    label="Password"
-                    required
-                  ></v-text-field>
-                </validation-provider>
-                <validation-provider name="checkbox">
-                  <v-checkbox label="จดจำฉัน" type="checkbox"></v-checkbox>
-                </validation-provider>
-
-                <v-btn
-                  class="white--text mb-4 mt-4 mr-2"
-                  style="width: 100%"
-                  type="submit"
-                  to="#"
-                  color="green darken-4"
-                  :disabled="invalid"
-                >
-                  เข้าสู่ระบบ
-                </v-btn>
-                <a href="#" class="text-decoration-none black--text">
-                  <p class="grey--text text-center">ลืมรหัสผ่าน?</p>
-                </a>
+          <v-form v-model="valid">
+            <div class="ml-3 mr-3">
+              <div class="card-body login-card-body">
+                <h1 class="login-box-msg mb-3">เข้าสู่ระบบ</h1>
+                <p class="login-box-msg grey--text">
+                  เข้าสู่ระบบเพื่อใช้งานระบบเว็บไซต์หน่วยงานสำเร็จรูป
+                </p>
               </div>
-            </form>
-          </validation-observer>
+              <v-text-field
+                outlined
+                v-model="username"
+                :rules="usernamerules"
+                label="Username"
+                required
+              ></v-text-field>
+              <v-text-field
+                outlined
+                type="password"
+                v-model="password"
+                :rules="passwordrules"
+                label="Password"
+                required
+              ></v-text-field>
+              <v-checkbox label="จดจำฉัน" type="checkbox"></v-checkbox>
+
+              <v-btn
+                class="white--text mb-4 mt-4 mr-2"
+                style="width: 100%"
+                type="submit"
+                to="#"
+                color="green darken-4"
+                :disabled="!valid"
+              >
+                เข้าสู่ระบบ
+              </v-btn>
+              <a href="#" class="text-decoration-none black--text">
+                <p class="grey--text text-center">ลืมรหัสผ่าน?</p>
+              </a>
+            </div>
+          </v-form>
         </div>
       </v-card>
     </div>
@@ -97,46 +81,15 @@
 
 <script>
 import foot from "~/components/foot.vue";
-import { required, max, regex } from "vee-validate/dist/rules";
-import {
-  extend,
-  ValidationObserver,
-  ValidationProvider,
-  setInteractionMode,
-} from "vee-validate";
-
-setInteractionMode("eager");
-
-extend("required", {
-  ...required,
-  message: "{_field_} can not be empty",
-});
-
-extend("max", {
-  ...max,
-  message: "{_field_} may not be greater than {length} characters",
-});
-
-extend("regex", {
-  ...regex,
-  message: "{_field_} {_value_} does not match {regex}",
-});
-
 export default {
   components: {
-    ValidationProvider,
-    ValidationObserver,
     foot,
   },
   data: () => ({
     username: "",
     password: "",
+    usernamerules: [(v) => !!v || "กรุณากรอก Username"],
+    passwordrules: [(v) => !!v || "กรุณากรอก Password"],
   }),
-
-  methods: {
-    submit() {
-      this.$refs.observer.validate();
-    },
-  },
 };
 </script>

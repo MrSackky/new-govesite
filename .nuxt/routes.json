@@ -3,35 +3,30 @@
     "name": "inspire",
     "path": "/inspire",
     "component": "C:\\\\Users\\\\Sackky\\\\Desktop\\\\new-govesite\\\\pages\\\\inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_f2f3c114"
+    "chunkName": "pages/inspire"
   },
   {
     "name": "loggg",
     "path": "/loggg",
     "component": "C:\\\\Users\\\\Sackky\\\\Desktop\\\\new-govesite\\\\pages\\\\loggg.vue",
-    "chunkName": "pages/loggg",
-    "_name": "_86635080"
+    "chunkName": "pages/loggg"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "C:\\\\Users\\\\Sackky\\\\Desktop\\\\new-govesite\\\\pages\\\\login.vue",
-    "chunkName": "pages/login",
-    "_name": "_7ecaa4f6"
+    "chunkName": "pages/login"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\Users\\\\Sackky\\\\Desktop\\\\new-govesite\\\\pages\\\\register.vue",
-    "chunkName": "pages/register",
-    "_name": "_4e57c137"
+    "chunkName": "pages/register"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Sackky\\\\Desktop\\\\new-govesite\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_1219eb24"
+    "chunkName": "pages/index"
   }
 ]
