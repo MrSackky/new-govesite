@@ -1,7 +1,6 @@
 <template>
   <div class="slide mb-3 mt-16" id="slide">
-    <!-- <navbars /> -->
-    <navt />
+    <navbars />
     <v-row class="col-right grey lighten-4">
       <v-col class="grey lighten-2 rounded-r-xl">
         <div class="text-right mt-16 mb-16 mr-8">
@@ -30,14 +29,12 @@
 </template>
 
 <script>
-// import navbars from "~/components/navbars.vue";
-import navt from "~/components/navt.vue";
+import navbars from "~/components/navbars.vue";
 
 export default {
   name: "slide",
   components: {
-    // navbars,
-    navt
+    navbars,
   }
 };
 </script>

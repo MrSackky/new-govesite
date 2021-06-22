@@ -102,41 +102,41 @@ import {
   extend,
   ValidationObserver,
   ValidationProvider,
-  setInteractionMode
+  setInteractionMode,
 } from "vee-validate";
 
 setInteractionMode("eager");
 
 extend("required", {
   ...required,
-  message: "{_field_} can not be empty"
+  message: "{_field_} can not be empty",
 });
 
 extend("max", {
   ...max,
-  message: "{_field_} may not be greater than {length} characters"
+  message: "{_field_} may not be greater than {length} characters",
 });
 
 extend("regex", {
   ...regex,
-  message: "{_field_} {_value_} does not match {regex}"
+  message: "{_field_} {_value_} does not match {regex}",
 });
 
 export default {
   components: {
     ValidationProvider,
     ValidationObserver,
-    foot
+    foot,
   },
   data: () => ({
     username: "",
-    password: ""
+    password: "",
   }),
 
   methods: {
     submit() {
       this.$refs.observer.validate();
-    }
-  }
+    },
+  },
 };
 </script>
