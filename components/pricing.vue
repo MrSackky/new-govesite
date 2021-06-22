@@ -1,4 +1,5 @@
 <template>
+  <v-container>
     <div class="pricing mb-16 pa-16" id="pricing">
       <div class="header text-center">
         <h1 class="mt-8">ตารางเปรียบเทียบแพ็กเกจ</h1>
@@ -34,7 +35,9 @@
                 </div>
                 <h1 class="price">1,800 บาท</h1>
                 <p>ต่อปี *ราคารวมภาษีมูลค่าเพิ่มแล้ว</p>
-                <v-btn class="success rounded-xl mt-3 mb-8" style="width: 100%">ขอใบเสนอราคา</v-btn>
+                <v-btn class="success rounded-xl mt-3 mb-8" style="width: 100%"
+                  >ขอใบเสนอราคา</v-btn
+                >
               </div>
             </v-card>
           </v-col>
@@ -67,8 +70,9 @@
                 </div>
                 <h1 class="price">5,300 บาท</h1>
                 <p>ต่อปี *ราคารวมภาษีมูลค่าเพิ่มแล้ว</p>
-                <v-btn class="success rounded-xl mt-3 mb-8" 
-              style="width: 100%">ขอใบเสนอราคา</v-btn>
+                <v-btn class="success rounded-xl mt-3 mb-8" style="width: 100%"
+                  >ขอใบเสนอราคา</v-btn
+                >
               </div>
             </v-card>
           </v-col>
@@ -106,7 +110,11 @@
                 </div>
                 <h1 class="price white--text">7,400 บาท</h1>
                 <p>ต่อปี *ราคารวมภาษีมูลค่าเพิ่มแล้ว</p>
-                <v-btn outlined color="white" class="rounded-xl mt-3 mb-8" style="width: 100%"
+                <v-btn
+                  outlined
+                  color="white"
+                  class="rounded-xl mt-3 mb-8"
+                  style="width: 100%"
                   >ขอใบเสนอราคา</v-btn
                 >
               </div>
@@ -115,6 +123,7 @@
         </v-row>
       </div>
     </div>
+  </v-container>
 </template>
 
 <script>
